@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a101703e57.js" crossorigin="anonymous"></script>
+    <title>Anna Isoz</title>
+</head>
+
+<body>
+    <div class="l_wrapper"> <!-- wrappern omsluter hela sidans grid-system-->
+
+        <!-- headern börjar här och består endast av navigation -->
+        <header class="l_header">
+            <nav class=" nav sub-nav">
+                <label for="menucheckbox" id="menuicon"></label>
+                <input type="checkbox" id="menucheckbox">
+                <ul class="nav-ul sub-nav-ul">
+                    <li><a class="nav-ul-li-a" href="./index.html">Hem</a></li>
+                    <li><a class="nav-ul-li-a" href="#">Mina tjänster</a></li>
+                    <li><a class="nav-ul-li-a thispage" href="./rapport.html">Rapport</a></li>
+                    <li><a class="nav-ul-li-a" href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- main börjar här -->
+        <main class="l_main l_subMain">
+
+            <!-- första sektionen med två texter och en bild -->
+            <div class="textTextFig">
+                <div class="heading box-1">
+                    <h2>Webbplatsens design</h2>
+                </div>
+                <div class="box-2">
+                    <p>För att kunna fokusera fullt ut på syftet med uppgiften - att tagga upp en komplett webbplats med korrekt HTML- och CSS-kod – har jag valt att använda mallen för sidans design som tillhandahålls i kursen.</p>
+                </div>
+                <figure class="figure box-3">
+                    <img class="figure-img" src="images/Desktop_ny_1440px.webp" alt="diagram över webbsidans design med sidhuvud, tre kolumner och sidfot">
+                    <figcaption class="figure-caption">Förlagan till designen</figcaption>
+                </figure>
+                <div class="heading box-4">
+                    <h2>Desktop first</h2>
+                </div>
+                <div class="box-5">
+                    <p>Ett av de första ställningstagandena man behöver göra är om man ska närma sig projektet ”desktop first” eller ”mobile first”. Efter att ha tagit del av en genomgång av för- och nackdelar (Johnson, J. 2019)2 valde jag ”desktop first” eftersom jag håller med om att det är roligare att ha hela paletten av möjligheter till sitt förfogande från början och sedan skala ner mot mindre skärmar. Det är också så som ämnet har angripits inom kursen hittills i demonstrationer och föreläsningar så det känns vedertaget.</p>
+                </div>
+            </div>
+
+            <!-- andra sektionen med två faktarutor -->
+
+            <div class="textText">
+                <div class="textText-look box-1">
+                    <h2>CSS reset</h2>
+                    <p>Jag väljer att använda CSS reset från Meyerweb (Meyer, E., 2011)1 därför att den tar bort <strong>all</strong> formatering, något som Parik Bernhardsson också nämner i sin föreläsning. Det passar mig bäst då jag tycker om att starta med ett blankt blad och vill slippa lägga tid på att undersöka varför en viss regel inte slår igenom som den ska.</p>
+                </div>
+                <div class="textText-look box-2">
+                    <h2>Font size</h2>
+                    <p>Det finns många sätt att bestämma storleken på typsnitt på webbplatsen men jag valde att följa riktlinjer från en guide som heter Shaping Design (EditorX 2021)3. Där föreslås att man sätter 10px som font-size i HTML-taggen för att sedan använda rem i de övriga CSS-reglerna och få jämt delbart med 10. Det tycker jag känns väldigt tydligt och enkelt.</p>
+                </div>
+            </div>
+
+            <!-- tredje sektionen med två texter och en bild -->
+
+            <div class="textTextFig">
+                <div class="heading box-1">
+                    <h2>Grid eller Flexbox?</h2>
+                </div>
+                <div class="box-2">
+                    <p>Jag lade mycket tid på att reflektera över och undersöka för- och nackdelar med att använda grid som struktur för huvudsidan. Det kändes som en god idé att göra det men samtidigt var det något som tog emot. Jag hittade en genomgång av skillnader mellan flexbox och grid på MDN web docs (MDN, 2023)5 som jag hade stor nytta av. </p>
+                    <p>Jag har från början haft en förkärlek för flexbox och jag tror jag fick en förklaring i den här artikeln, nämligen att flexbox lämpar sig när man vill anpassa layouten efter innehållet. När jag tittade på mallen för designen började jag fundera på hur jag skulle få innehållet att se likadant ut i min kod. Då är det lätt att tänka område för område – header, navigation, huvudinnehåll, footer – och designa varje område med flexbox. Det var först vid Christian Olssons spontana genomgång av grid vid ett klasshäng i zoom som jag fick klart för mig att man kan kombinera grid och flexbox på ett för mig idealiskt sätt. Jag kunde använda grid som struktur för hela sidan och sedan använda flexbox inom de olika områdena för att få innehållet så som jag ville ha det. Det gjorde att jag testade att lägga allt innehåll i ett grid och det blev en bra lösning.</p>
+                </div>
+                <figure class="figure box-3">
+                    <img class="figure-img" src="images/Flexbox-grid_ny_936px.webp" alt="Illustration av layout med flexbox och css grid">
+                    <figcaption class="figure-caption">Flexbox eller grid?</figcaption>
+                </figure>
+                <div class="heading box-4">
+                    <h2>Grid-template-area</h2>
+                </div>
+                <div class="box-5">
+                    <p>Eftersom jag har lättare att jobba visuellt än matematiskt så föredrar jag att använda grid-template-areas istället för att lägga element från en grid line till en annan. Jag har använt metoden som beskrivs i Smashing Magazine (Andrew, R. 2020)6 för att placera innehållet på förstasidan enligt mallen. Det blir lite mer avstånd mellan kolumnerna än i mock-upen men jag tycker det blir snyggare och ger ett luftigare intryck när det är så pass mycket text.</p>
+                </div>
+            </div>
+
+            <!-- fjärde sektionen med en bild och två texter -->
+            <div class="figTextText">
+                <figure class="figure box-1">
+                    <img class="figure-img" src="images/accessibility_ny.webp" alt="foto av en hand med penna som gör wireframes till mobilskärmar">
+                    <figcaption class="figure-caption">Design för tillgänglighet</figcaption>
+                </figure>
+                <div class="heading box-2">
+                    <h2>Tillgänglighet</h2>
+                </div>
+                <div class="box-3">
+                    <p>Till navigeringen har jag använt en oordnad lista eftersom det rekommenderas av tillgänglighetsskäl (W3C 2017)4. </p>
+                    <p>Jag debatterade med mig själv om jag skulle lägga huvudinnehållet på förstasidan i ett main-element eller inte. Rent tekniskt verkade det fungera lika bra att lägga de tre kolumnerna som div-element direkt under wrapper. Men jag gick tillbaka igen och läste mer om semantiken och bestämde mig för att ändå lägga till main-taggar runt div:arna framför allt för tillgänglighetens skull. Main-taggen förbättrar förståelsen för innehållet så att skärmläsare kan skippa återkommande element, såsom menyer, för att komma direkt till huvudinnehållet (MDN 2023)10.</p>
+                </div>
+                <div class="heading box-4">
+                    <h2>Negativa marginaler</h2>
+                </div>
+                <div class="box-5">
+                    <p>För att åstadkomma layouten med de runda fotona som överlappar elementen som kommer före och efter så har jag använt negativa marginaler. Åsikterna verkar gå isär om huruvida detta är ett ok sätt att använda negativa marginaler och jag hittar ingen ”officiell” hållning. Men jag finner stöd för metoden (Zhang, S. 2022)9 om det är för att positionera element där box-modellen sätter gränser och man vill ha ett alternativ till absolute positionering. En nackdel med att använda negativa marginaler kan vara att det blir rörigt i koden, så jag har lagt in en kommentar vid varje tillfälle för att förbättra tydligheten.</p>
+                </div>
+            </div>
+
+            <!-- femte sektionen med två faktarutor -->
+            <div class="textText">
+                <div class="textText-look box-1">
+                    <h2>Media queries screen</h2>
+                    <p>Den första brytpunkten kommer vid 960px där jag tyckte att sidan började ”gå sönder”. Navigationstexten kommer in över det gula i header-bakgrunden och blir svår att läsa så då fick den en mörkare bakgrund. Jag gick över till en layout med bilderna till vänster och text till höger i huvudinnehållet för att bli av med de långa textspalterna som uppstår när man har dem sida vid sida. Läsaren ogillar att skrolla (Bergström, B. 2021)8 så det är bättre att försöka få in texten på en skärmsida. Samtidigt passade jag på att ändra ordning på info-boxarna med hjälp av css order så att de ligger i den ordning de ska ha i mobilversionen.</p>
+                    <p>Den layouten fungerar ner till ungefär 600px då menyn snart sträcker sig över hela bredden och jag väljer att lägga in en hamburger-meny i stället.</p>
+                </div>
+                <div class="textText-look box-2">
+                    <h2>Media queries print</h2>
+                    <p>Det står i beskrivningen av uppgiften att man kan lägga media queries för print i en separat CSS-fil. Vi pratade också om det på ett klasshäng och det verkar vara dels en smaksak och dels en fråga om hur mycket kod man har. Jag funderade vidare på det och sökte för- och nackdelar på nätet men hittade inget som var helt klockrent. Enligt CSS-Tricks (Coyier, C. 2009)7 kan det finnas skäl att lägga CSS-kod som är unik för en viss webbsida i en egen CSS-fil, men jag hittar inga bra argument för att lägga just media queries för print i en egen fil så jag har lagt dem längst ner i style.css.</p>
+                    <p>För att göra innehållet mer läsvänligt i utskriftsversionen har jag ändrat layouten från grid och flexbox till block (Buckler, C. 2022)11. Det tar bort all fancy layout så att innehållet skrivs ut på ett enklare manér.</p>
+                </div>
+            </div>
+
+            <!-- sjätte sektionen med två texter och en bild -->
+            <div class="textTextFig">
+                <div class="heading box-1">
+                    <h2>Rapportsidan</h2>
+                </div>
+                <div class="box-2">
+                    <p>Rapporten med runt 1200 ord som ska in på samma sida skapar sitt eget lilla bekymmer. Här behöver läsbarheten verkligen tas med i beräkningen och innehållet delas upp i lagom stora bitar för att presenteras på ett attraktivt och lättläst sätt. Efter en del research har jag valt att använda kantrubriker i desktop-varianten, vilket är en god idé för en lite bredare skärm (Bergström, B. 2021)12. Kortare textstycken har jag lagt i något som kan likna faktarutor med avvikande bakgrundsfärg för att skapa kontrast. På mindre skärmar presenteras texten i en kolumn med tydliga rubriker och jag behåller faktarutorna med bakgrundsfärg.</p>
+                </div>
+                <figure class="figure box-3">
+                    <img class="figure-img" src="images/report_ny.webp" alt="foto av en stapel böcker och skrifter med olika sidor markerade">
+                    <figcaption class="figure-caption">Rapportskrivande</figcaption>
+                </figure>
+
+
+                <!-- referenslistan här börjar -->
+
+                <div class="heading box-4">
+                    <h2>Källor</h2>
+                </div>
+                <div class="box-5">
+                    <ol>
+                        <li>Johnson, J. (2019), <em>Mobile First Design: Why It&#39;s Great and Why It Sucks</em>. Tillgänglig: <a href="https://designshack.net/articles/css/mobilefirst/">https://designshack.net/articles/css/mobilefirst/</a> [Åtkomstdatum: 2023-02-19]</li>
+                        <li>Meyerweb (2011), <em>CSS Tools: Reset CSS</em>. Tillgänglig: <a href="https://meyerweb.com/eric/tools/css/reset/ ">https://meyerweb.com/eric/tools/css/reset/</a> [Åtkomstdatum: 2023-02-18]</li>
+                        <li>MEditorX (2021), <em>Font size guidelines for responsive websites</em>. Tillgänglig: <a href="https://www.editorx.com/shaping-design/article/font-size">https://www.editorx.com/shaping-design/article/font-size</a> [Åtkomstdatum: 2023-02-19]</li>
+                        <li>MDN web docs (2023), <em>Relationship of grid layout to other layout methods</em>. Tillgänglig: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout ">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout </a> [Åtkomstdatum: 2023-02-24]</li>
+                        <li>Andrew, R. (2020), <em>Understanding CSS Grid: Grid Template Areas</em>. Tillgänglig: <a href="https://www.smashingmagazine.com/understanding-css-grid-template-areas/">https://www.smashingmagazine.com/understanding-css-grid-template-areas/</a> [Åtkomstdatum: 2023-02-18]</li>
+                        <li>W3C WAI (2017), <em>Menu Structure</em>. Tillgänglig: <a href="https://www.w3.org/WAI/tutorials/menus/structure/">https://www.w3.org/WAI/tutorials/menus/structure/</a> [Åtkomstdatum: 2023-02-18]</li>
+                        <li>MDN web docs (2023), <em>&#8249;main&#8250;</em>. Tillgänglig: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main</a> [Åtkomstdatum: 2023-03-02]</li>
+                        <li>Zhang, S (2002), <em>Are negative CSS margins bad practice?</em> Tillgänglig: <a href="https://blog.shimin.io/are-css-negative-margins-bad-practice/">https://blog.shimin.io/are-css-negative-margins-bad-practice/</a> [Åtkomstdatum: 2023-03-01]</li>
+                        <li>Bergström, B. (2021), Effektiv Visuell Kommunikation. 12 uppl. Stockholm: Carlsson Bokförlag</li>
+                        <li>Coyier, C. (2009), <em>Unique Pages, Unique CSS Files</em>. Tillgänglig: <a href="https://css-tricks.com/unique-pages-unique-css-files/">https://css-tricks.com/unique-pages-unique-css-files/</a> [Åtkomstdatum: 2023-02-23]</li>
+                        <li>OpenPlay Blog (2022), <em>Making your Web Pages Printer-Friendly with CSS</em>. Tillgänglig: <a href="https://blog.openreplay.com/make-your-web-pages-web-printer-friendly-with-css/">https://blog.openreplay.com/make-your-web-pages-web-printer-friendly-with-css/</a> [Åtkomstdatum: 2023-03-07]</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer börjar här -->
+        <footer class="l_footer">
+            <div class="footer">
+                <article class="footer-article">
+                    <h3>Kontakta oss</h3>
+                    <p class=".footer-text"><a class="footer-link" href="mailto:info@example.com">info@mycompany.se</a></p>
+                    <p class=".footer-text">070-504 05 05</p>
+                </article>
+                <article class="footer-article">
+                    <h3>Fotografier</h3>
+                    <p class=".footer-text">från <a class="footer-link" href="unsplash.com">Unsplash</a></p>
+                </article>
+                <article class="footer-article">
+                    <h3>Sociala medier</h3>
+                    <i class="fab fa-facebook-f footer-icon"></i>
+                    <i class="fab fa-instagram-square footer-icon"></i>
+                </article>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
