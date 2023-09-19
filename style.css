@@ -339,6 +339,9 @@ ol li a {
     }
 
     /* layout */
+    .l-header {
+        background-image: url(images/ny_bakgrund_960px.webp);
+    }
 
     .l_wrapper {
         grid-template-columns: 1fr;
@@ -404,8 +407,6 @@ ol li a {
         box-shadow: 5px 5px 5px rgb(179, 177, 177);
     }
 
-    /* grids på RAPPORTSIDAN */
-
     .textTextFig,
     .figTextText,
     .textText {
@@ -451,8 +452,12 @@ ol li a {
 /* ======================= MEDIA QUERY MOBIL ====================================*/
 
 @media only screen and (max-width: 600px) {
-
-    /* header & nav */
+    /* layout */
+    .l-header {
+        background-image: url(images/ny_bakgrund_600px.webp);
+    }
+    
+    /* modules */
     .nav {
         position: relative;
     }
