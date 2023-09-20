@@ -1,10 +1,10 @@
 /* INNEHÅLLSFÖRTECKNING 
-
-1. Base
-2. Layout
-3. Module
-4. State
-5. Media queries
+1. CSS reset
+2. Base
+3. Layout
+4. Module
+5. State
+6. Media queries
 */
 
 /*
@@ -32,14 +32,14 @@
     overflow-wrap: break-word;
   }
 
-/* 1. Base */
+/* 2. Base */
 
 html {
     font-size: 10px;                    /* jämt delbart med 10, enkelt att ange övriga storlekar i rem*/
 }
 
 body {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Source Serif Pro', serif;
     background-color: #eee;
     width: 100%;
 }
@@ -107,7 +107,7 @@ ol li a {
     font-size: 1.4rem;
 }
 
-/* 2. Layout */
+/* 3. Layout */
 
 .l_wrapper {
     display: grid;
@@ -142,7 +142,7 @@ ol li a {
     grid-area: FOOT;
 }
 
-/* 3. Module */
+/* 4. Module */
 
 /* nav module ligger i .l_header */
 .nav {
@@ -313,7 +313,7 @@ ol li a {
     text-decoration: underline;
 }
 
-/* 4. State */
+/* 5. State */
 .thispage {
     color: #DDA045;
 }
@@ -323,7 +323,7 @@ ol li a {
     display: none;
 }
 
-/* 5. Media queries */
+/* 6. Media queries */
 
 /* MEDIA QUERY SURFPLATTA +++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -456,7 +456,7 @@ ol li a {
     .l-header {
         background-image: url(images/ny_bakgrund_600px.webp);
     }
-    
+
     /* modules */
     .nav {
         position: relative;
