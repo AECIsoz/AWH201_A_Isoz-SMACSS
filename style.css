@@ -205,6 +205,7 @@ ol li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 33%;
     margin-top: 2rem;
 }
 
@@ -384,6 +385,7 @@ ol li a {
     .info {
         flex-direction: row;
         align-items: flex-start;
+        width: auto;
         margin: 2rem 7rem 2rem 3rem;
     }
 
